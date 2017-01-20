@@ -10,28 +10,22 @@ import UIKit
 
 class Screen2ViewController: UIViewController {
     
-    var emoji = "NO EMOJI"
-    
+    var emoji = Emoji()
     @IBOutlet weak var bigEmoji: UILabel!
     @IBOutlet weak var textEmoji: UILabel!
+    
+    @IBOutlet weak var EmojiCategory: UILabel!
+    @IBOutlet weak var emojiCreationYear: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        bigEmoji.text = emoji
+        bigEmoji.text = emoji.emojiIcon
+        textEmoji.text = emoji.definition
+        EmojiCategory.text = "Category: \(emoji.category)"
+        emojiCreationYear.text = "Creation Year: \(emoji.creationYear)"
         
-        if emoji == "😊" {
-            textEmoji.text = "A smiling face"
-        } else if emoji == "🙁" {
-            textEmoji.text = "A sad face"
-        } else if emoji == "😍" {
-            textEmoji.text = "A smiley with heart eyes"
-        } else if emoji == "🐶" {
-            textEmoji.text = "A cute hamster"
-        } else {
-            textEmoji.text = "Poop! Gross!"
-        }
     }
 
     override func didReceiveMemoryWarning() {

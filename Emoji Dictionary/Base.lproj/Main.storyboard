@@ -68,17 +68,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai7-h0-pcU">
+                                <rect key="frame" x="122.5" y="434" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YearOfCreation: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edR-uq-e5z">
+                                <rect key="frame" x="105" y="475" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B40-bX-BFY" firstAttribute="centerX" secondItem="sY7-up-D4f" secondAttribute="centerX" id="1K6-ua-WrP"/>
+                            <constraint firstItem="edR-uq-e5z" firstAttribute="top" secondItem="Ai7-h0-pcU" secondAttribute="bottom" constant="20" id="1Rf-89-avz"/>
+                            <constraint firstItem="edR-uq-e5z" firstAttribute="centerX" secondItem="sY7-up-D4f" secondAttribute="centerX" id="4Ix-hp-1SC"/>
                             <constraint firstItem="B40-bX-BFY" firstAttribute="top" secondItem="jPM-iw-Eb7" secondAttribute="bottom" constant="50" id="6Bt-aJ-mMj"/>
                             <constraint firstItem="jPM-iw-Eb7" firstAttribute="centerX" secondItem="sY7-up-D4f" secondAttribute="centerX" id="JcN-za-2Iv"/>
+                            <constraint firstItem="Ai7-h0-pcU" firstAttribute="top" secondItem="B40-bX-BFY" secondAttribute="bottom" constant="20" id="T6D-gf-Sgb"/>
                             <constraint firstItem="jPM-iw-Eb7" firstAttribute="top" secondItem="D2C-RP-TIb" secondAttribute="bottom" constant="40" id="c0d-Ne-Kyq"/>
+                            <constraint firstItem="Ai7-h0-pcU" firstAttribute="centerX" secondItem="sY7-up-D4f" secondAttribute="centerX" id="tqz-k5-ITO"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EmojiCategory" destination="Ai7-h0-pcU" id="dhV-q4-zQu"/>
                         <outlet property="bigEmoji" destination="jPM-iw-Eb7" id="uVl-8Q-RYf"/>
+                        <outlet property="emojiCreationYear" destination="edR-uq-e5z" id="NZh-Ls-Hyq"/>
                         <outlet property="textEmoji" destination="B40-bX-BFY" id="73a-7u-q4p"/>
                     </connections>
                 </viewController>

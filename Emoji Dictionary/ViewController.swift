@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var emojiTableView: UITableView!
-    let emojiArray = ["😊", "🙁", "😍","🐶", "💩"]
+    var emojiArray : [Emoji] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         emojiTableView.dataSource = self
         emojiTableView.delegate = self
+        emojiArray = makeEmojiArray()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,7 +28,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = emojiArray[indexPath.row]
+        let emoji = emojiArray[indexPath.row]
+        cell.textLabel?.text = emoji.emojiIcon
         return cell
     }
     
@@ -38,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let scrn2VC = segue.destination as! Screen2ViewController
-        scrn2VC.emoji = sender as! String
+        scrn2VC.emoji = sender as! Emoji
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,6 +48,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Dispose of any resources that can be recreated.
     }
 
+    func makeEmojiArray() -> [Emoji] {
+        let emoji1 = Emoji()
+        emoji1.createEmoji(emojiIcon1: "😊", definition1: "A smiling face", category1: "Smiley", creationYear1: 2009)
+        
+        let emoji2 = Emoji()
+        emoji2.createEmoji(emojiIcon1: "🙁", definition1: "A sad face", category1: "Smiley", creationYear1: 2016)
+        
+        let emoji3 = Emoji()
+        emoji3.createEmoji(emojiIcon1: "😍", definition1: "A smiley with heart eyes", category1: "Smiley", creationYear1: 2009)
 
+        let emoji4 = Emoji()
+        emoji4.createEmoji(emojiIcon1: "🐶", definition1: "A cute hamster", category1: "Animal", creationYear1: 2011)
+        
+        let emoji5 = Emoji()
+        emoji5.createEmoji(emojiIcon1: "💩", definition1: "Poop! Gross!", category1: "Smiley", creationYear1: 2012)
+        
+        return [emoji1, emoji2, emoji3, emoji4, emoji5]
+    }
 }
 
