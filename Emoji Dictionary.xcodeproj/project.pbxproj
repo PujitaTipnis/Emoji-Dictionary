@@ -12,6 +12,7 @@
 		9F8221D51E31AD93007FF9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8221D31E31AD93007FF9C3 /* Main.storyboard */; };
 		9F8221D71E31AD93007FF9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F8221D61E31AD93007FF9C3 /* Assets.xcassets */; };
 		9F8221DA1E31AD93007FF9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8221D81E31AD93007FF9C3 /* LaunchScreen.storyboard */; };
+		9F8221E21E31E6B1007FF9C3 /* Screen2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8221E11E31E6B1007FF9C3 /* Screen2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9F8221D61E31AD93007FF9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F8221D91E31AD93007FF9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F8221DB1E31AD93007FF9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F8221E11E31E6B1007FF9C3 /* Screen2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9F8221CF1E31AD93007FF9C3 /* AppDelegate.swift */,
 				9F8221D11E31AD93007FF9C3 /* ViewController.swift */,
+				9F8221E11E31E6B1007FF9C3 /* Screen2ViewController.swift */,
 				9F8221D31E31AD93007FF9C3 /* Main.storyboard */,
 				9F8221D61E31AD93007FF9C3 /* Assets.xcassets */,
 				9F8221D81E31AD93007FF9C3 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				9F8221D21E31AD93007FF9C3 /* ViewController.swift in Sources */,
 				9F8221D01E31AD93007FF9C3 /* AppDelegate.swift in Sources */,
+				9F8221E21E31E6B1007FF9C3 /* Screen2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

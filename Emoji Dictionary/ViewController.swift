@@ -30,7 +30,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = emojiArray[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "moveSegue", sender: emojiArray[indexPath.row])
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let scrn2VC = segue.destination as! Screen2ViewController
+        scrn2VC.emoji = sender as! String
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
